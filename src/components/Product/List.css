@@ -1,0 +1,20 @@
+.header{
+  padding: 15px 10px 8px 10px;
+  min-height: 50px;
+}
+.table-box{
+  display: table;
+  width: 100%;
+}
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+.operation{
+  margin: 0 .5em;
+}
+
+
+.table-box .table-cell.tr button{
+  margin-left:10px; 
+}

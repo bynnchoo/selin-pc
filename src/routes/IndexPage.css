@@ -1,0 +1,92 @@
+.app-warp{
+  position: relative;
+  height: 100%;
+  background-color: #e9ecf3;
+}
+.app-warp .header-warp{
+  height: 44px;
+  width: 100%;
+  background-color: #03b8cc;
+}
+.app-warp .header-warp>ul:last-child{
+  float: right;
+}
+
+.r-warp{
+  padding: 10px 5px 0;
+  height: 90%;
+  height: calc(100% - 44px);
+  min-width: 1000px;
+}
+.app-warp .r-warp .left-menu-wrap{
+  position: relative;
+  background-color: #fff;
+  padding: 10px 0;
+  float: left;
+  height: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.app-warp .r-warp .left-menu-wrap>ul{
+  border-right:none;
+}
+.app-warp .r-warp .left-menu-wrap.full{
+  width: 160px;
+}
+.app-warp .r-warp .main-wrap{
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.main-wrap-full{
+  margin-left:170px;
+}
+.app-warp .r-warp .main-wrap .content{
+  background: #fff;
+  padding: 0 20px;
+  height: calc(100% - 30px);
+  position: relative;
+  -webkit-transition: margin,height .1s ease-out 0s;
+  transition: margin,height .1s ease-out 0s;
+  z-index: 8;
+  overflow:scroll;
+}
+
+.content-wrap{
+  height: 100%;
+  overflow: hidden;
+}
+.breadcrumb{
+  height: 30px;
+}
+
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.welcome {
+  height: 328px;
+  background: url(../assets/yay.jpg) no-repeat center 0;
+  background-size: 388px 328px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin-top: 1.8em;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}

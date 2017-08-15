@@ -1,0 +1,15 @@
+
+html, body, :global(#root) {
+  height: 100%;
+}
+
+.fr{
+  float:right;
+}
+
+.tr{
+  text-align: right;
+}
+.space{
+  margin: 0 10px;
+}
