@@ -168,8 +168,6 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
               style={{ width: 300 }}
               onSearch={keywordSearch}/>
           </div>
-          <Hello name="123"/>
-          <Hello name="456"/>
           <div className="table-cell tr" id="productListBtnGroup">
             <Button>导出</Button>
             <Dropdown overlay={importMenu}>

@@ -54,5 +54,3 @@ class PicturesWall extends React.Component {
   }
 }
 export default PicturesWall;
-
-// ReactDOM.render(<PicturesWall />, mountNode);

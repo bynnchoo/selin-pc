@@ -9,40 +9,65 @@ const Option = Select.Option;
 /*商品规格信息*/
 function ProductSpec({ dispatch}) {
 
+
+  const specRender = function({id}){
+      if(id=="1"){
+       return (
+          <Select
+            size="large"
+            mode="multiple"
+            style={{ width: '100%' }}
+            placeholder="请选择"
+          >
+            <Option key="S">S</Option>
+            <Option key="M">M</Option>
+            <Option key="L">L</Option>
+            <Option key="XL">XL</Option>
+          </Select>
+        )
+      }else{
+        return (
+            <Select
+              size="large"
+              mode="multiple"
+              style={{ width: '100%' }}
+              placeholder="请选择"
+            >
+              <Option key="红">红</Option>
+              <Option key="黄">黄</Option>
+              <Option key="绿">绿</Option>
+              <Option key="蓝">蓝</Option>
+            </Select>
+          )
+      }
+  }
+
   const columns = [
     {
       title: '规格名称',
       dataIndex: 'name',
       key: 'name',
-      width:250,
+      width:250/*,
       render: function(text, record, index) {
         return (<Input size="large" value={text}/>);
-      }
+      }*/
     },
     {
       title: '规格值',
       dataIndex: 'value',
       key: 'value',
       render:function(text, record, index){
-        return (<Select
-            size="large"
-            mode="multiple"
-            style={{ width: '100%' }}
-            placeholder="请选择"
-          >
-            <Option key="颜色">颜色</Option>
-            <Option key="尺码">尺码</Option>
-          </Select>)
+        return specRender(record)
       }
     }]
   const dataSource = [
     { 
       id:"1",
-      name:"规格1",
+      name:"尺码",
       value:""
     },{ 
       id:"2",
-      name:"规格2",
+      name:"颜色",
       value:""
     }
   ]

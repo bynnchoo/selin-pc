@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import ProductBase from './Base';
 import ProductSpec from './Spec';
 import Pictures from './Pictures';
+import PriceForm from './Price';
 
 function prodCreate(dispatch){
   return (
@@ -15,6 +16,9 @@ function prodCreate(dispatch){
       </div>
       <div id="ProductPictures">
         <Pictures/>
+      </div>
+      <div id="ProductPrice">
+        <PriceForm/>
       </div>
       <div style={{ height: 30}}></div>
     </div>
