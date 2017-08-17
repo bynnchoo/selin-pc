@@ -4,9 +4,11 @@ import { Table, Pagination, Popconfirm, Button,Dropdown,Menu,Icon,Input } from '
 import { routerRedux } from 'dva/router';
 import styles from './List.css';
 import { PAGE_SIZE } from '../../constants';
+import MyTag from '../Common/CheckboxGroup';
+import Hello from '../../components/Hello';
+
 /*import UserModal from './UserModal';*/
 const Search = Input.Search;
-
 
 function ProductList({ dispatch, list: dataSource, loading, total, page: current }) {
 
@@ -116,7 +118,7 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
   }
   function onSelectChange(selectedRowKeys) {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
-    this.setState({ selectedRowKeys });
+    // this.setState({ selectedRowKeys });
   }
   const selectedRowKeys  = [];
   const rowSelection = {
@@ -167,12 +169,19 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
               style={{ width: 300 }}
               onSearch={keywordSearch}/>
           </div>
+          <Hello name="123"/>
+          <Hello name="456"/>
           <div className="table-cell tr" id="productListBtnGroup">
             <Button>导出</Button>
             <Dropdown overlay={importMenu}>
               <Button>导入<Icon type="down" /></Button>
             </Dropdown>
             <Button type="primary">新增</Button>
+            <div>
+              <MyTag checked={false} tag="Tag1"/>
+              <MyTag checked={true} tag="Tag2"/>
+              <MyTag checked={true} tag="Tag3"/>
+            </div>
           </div>
         </div>
       </div>

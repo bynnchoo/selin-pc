@@ -10,7 +10,7 @@ export default {
   reducers: {
     save(state, { payload: { data: list, total, page } }) {
       return { ...state, list, total, page };
-    },
+    }
   },
   effects: {
     *fetch({ payload: { page = 1 } }, { call, put }) {

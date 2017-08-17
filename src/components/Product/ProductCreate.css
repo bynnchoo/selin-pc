@@ -1,0 +1,14 @@
+.create-header:global{
+  color: #03b8cc;
+  font-size: inherit;
+  font-weight: 400;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.pde-fh3-tit:global{
+  color: #03b8cc;
+  font-size: 16px;
+  font-weight: 400; 
+  margin-right: 20px;
+}
+

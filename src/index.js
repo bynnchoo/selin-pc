@@ -15,12 +15,13 @@ const app = dva({
   },
 });
 
+app.model(require("./models/my/myTag"));
 app.model(require("./models/common"));
+
 app.model(require("./models/users"));
 app.model(require("./models/products"));
 // 2. Plugins
 app.use(createLoading());
-
 // 3. Model
 // Moved to router.js
 

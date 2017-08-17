@@ -15,7 +15,6 @@ export default {
   },
   effects: {
     *fetch({ payload: { page = 1 } }, { call, put }) {
-      console.log("fetch in model")
       const { data, headers } = yield call(productService.fetch, { page });
       yield put({
         type: 'save',
@@ -45,11 +44,7 @@ export default {
   },
   subscriptions: {
     setup({ dispatch, history }) {
-      console.log("subscriptions...............")
       return history.listen(({ pathname, query }) => {
-        console.log("1231231231231231323")
-        console.log(pathname);
-        console.log(query)
         if (pathname=="/products/list") {
           dispatch({ type: 'fetch', payload: query });
         }

@@ -51,7 +51,8 @@
   -webkit-transition: margin,height .1s ease-out 0s;
   transition: margin,height .1s ease-out 0s;
   z-index: 8;
-  overflow:scroll;
+  overflow-y:scroll;
+  margin-bottom: 100px;
 }
 
 .content-wrap{

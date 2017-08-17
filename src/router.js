@@ -11,6 +11,10 @@ const products = (location, callback) => {
   require.ensure([], require => {callback(null,
     require('./routes/Product/List'))}, 'products')
 };
+const productCreate = (location, callback) => {
+  require.ensure([], require => {callback(null,
+    require('./routes/Product/Create'))}, 'productCreate')
+};
 /*const products = (location, callback) => {
   require.ensure([], require => {callback(null,
     require('./routes/ProductList'))}, 'product')
@@ -33,7 +37,7 @@ export default function({ history }) {
         <Route path="/users" getComponent={users} />
         <Route path="/products/list" getComponent={products} />
         {/*<Route path="/products" getComponent={products} />*/}
-        <Route path="/12" getComponent={r12} />
+        <Route path="/product/create" getComponent={productCreate} />
         <Route path="/22" getComponent={r22} />
       </Route>
     </Router>
