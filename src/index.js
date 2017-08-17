@@ -15,7 +15,6 @@ const app = dva({
   },
 });
 
-app.model(require("./models/my/myTag"));
 app.model(require("./models/common"));
 
 app.model(require("./models/users"));

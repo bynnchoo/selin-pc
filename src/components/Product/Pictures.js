@@ -1,6 +1,6 @@
 import { connect } from 'dva';
 import { Upload, Icon, Modal } from 'antd';
-import styles  from './Image.css'
+
 
 class PicturesWall extends React.Component {
   state = {
@@ -34,6 +34,9 @@ class PicturesWall extends React.Component {
     );
     return (
       <div className="clearfix">
+        <h3 className="create-header">
+          <span className="pde-fh3-tit">商品图片</span>
+        </h3>
         <Upload
           action="//jsonplaceholder.typicode.com/posts/"
           listType="picture-card"
@@ -41,7 +44,7 @@ class PicturesWall extends React.Component {
           onPreview={this.handlePreview}
           onChange={this.handleChange}
         >
-          {fileList.length >= 3 ? null : uploadButton}
+          {fileList.length >= 10 ? null : uploadButton}
         </Upload>
         <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
           <img alt="example" style={{ width: '100%' }} src={previewImage} />
@@ -50,6 +53,6 @@ class PicturesWall extends React.Component {
     );
   }
 }
-export default connect({})(PicturesWall);
+export default PicturesWall;
 
 // ReactDOM.render(<PicturesWall />, mountNode);

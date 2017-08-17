@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import ProductBase from './Base';
 import ProductSpec from './Spec';
-import ProductImage from './Image';
+import Pictures from './Pictures';
 
 function prodCreate(dispatch){
   return (
@@ -13,9 +13,10 @@ function prodCreate(dispatch){
       <div id="ProductSpec">
         <ProductSpec/>
       </div>
-      <div id="ProductImage">
-        <ProductImage/>
+      <div id="ProductPictures">
+        <Pictures/>
       </div>
+      <div style={{ height: 30}}></div>
     </div>
   )
 };

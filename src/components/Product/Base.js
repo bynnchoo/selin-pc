@@ -2,13 +2,15 @@ import React from 'react';
 import { connect } from 'dva';
 import { Row, Col,Form, Input, Tooltip, Icon, Cascader, Select, Checkbox, Button, AutoComplete } from 'antd';
 import {TreeSelect,InputNumber,Tag} from 'antd';
-import {CheckboxGroup} from '../Common/CheckboxGroup';
+import KeywordTag from '../Common/KeywordTag';
 import styles from './ProductCreate.css';
 
 const TreeNode = TreeSelect.TreeSelect;
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
+
+
 /*商品基本信息*/
 class ProductBaseForm extends React.Component {
   state = {
@@ -79,14 +81,6 @@ class ProductBaseForm extends React.Component {
         },
       },
     };
-    // const prefixSelector = getFieldDecorator('prefix', {
-    //   initialValue: '86',
-    // })(
-    //   <Select style={{ width: 60 }}>
-    //     <Option value="86">+86</Option>
-    //     <Option value="87">+87</Option>
-    //   </Select>
-    // );
 
     const websiteOptions = autoCompleteResult.map(website => (
       <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
@@ -214,9 +208,9 @@ class ProductBaseForm extends React.Component {
                 label="商品标签"
               >
                 <div>
-                  <Tag >新品上架</Tag>
-                  <Tag >热卖推荐</Tag>
-                  <Tag >清仓特惠</Tag>
+                  <KeywordTag>新品上架</KeywordTag>
+                  <KeywordTag>热卖推荐</KeywordTag>
+                  <KeywordTag>清仓特惠</KeywordTag>
                 </div>
               </FormItem>
             </Col>
@@ -224,56 +218,7 @@ class ProductBaseForm extends React.Component {
         </Form>
       </div>
     )
-    // return (
-    //   <Form>
-    //     <Row style={{width:'100%',margin:'0 auto'}}>
-    //     <Col span={12}>
-    //       <FormItem
-    //         {...formItemLayout}
-    //         label="E-mail"
-    //         hasFeedback
-    //       >
-    //         {getFieldDecorator('email', {
-    //           rules: [{
-    //             type: 'email', message: 'The input is not valid E-mail!',
-    //           }, {
-    //             required: true, message: 'Please input your E-mail!',
-    //           }],
-    //         })(
-    //           <TreeSelect
-    //             showSearch
-    //             value={this.state.value}
-    //             dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-    //             placeholder="Please select"
-    //             allowClear
-    //             treeDefaultExpandAll/*
-    //             onChange={this.onChange}*/
-    //           >
-    //             <TreeNode value="parent 1" title="parent 1" key="0-1">
-    //               <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
-    //                 <TreeNode value="leaf1" title="my leaf" key="random" />
-    //                 <TreeNode value="leaf2" title="your leaf" key="random1" />
-    //               </TreeNode>
-    //               <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
-    //                 <TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
-    //               </TreeNode>
-    //             </TreeNode>
-    //           </TreeSelect>
-    //         )}
-    //       </FormItem>
-    //     </Col>
-    //     <Col span={12}>
-    //       <FormItem {...tailFormItemLayout} style={{ marginBottom: 8 }}>
-    //         {getFieldDecorator('agreement', {
-    //           valuePropName: 'checked',
-    //         })(
-    //           <Checkbox>I have read the <a href="">agreement</a></Checkbox>
-    //         )}
-    //       </FormItem>
-    //     </Col>
-    //   </Row>
-    //   </Form>
-    // );
   }
 }
-export default connect()(Form.create()(ProductBaseForm));
+// export default connect()(Form.create()(ProductBaseForm));
+export default Form.create()(ProductBaseForm);

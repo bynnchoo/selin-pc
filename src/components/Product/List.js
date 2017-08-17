@@ -4,7 +4,6 @@ import { Table, Pagination, Popconfirm, Button,Dropdown,Menu,Icon,Input } from '
 import { routerRedux } from 'dva/router';
 import styles from './List.css';
 import { PAGE_SIZE } from '../../constants';
-import MyTag from '../Common/CheckboxGroup';
 import Hello from '../../components/Hello';
 
 /*import UserModal from './UserModal';*/
@@ -177,11 +176,6 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
               <Button>导入<Icon type="down" /></Button>
             </Dropdown>
             <Button type="primary">新增</Button>
-            <div>
-              <MyTag checked={false} tag="Tag1"/>
-              <MyTag checked={true} tag="Tag2"/>
-              <MyTag checked={true} tag="Tag3"/>
-            </div>
           </div>
         </div>
       </div>

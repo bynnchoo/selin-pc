@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Row, Col,Table,Input,Select } from 'antd';
-import styles from './ProductCreate.css';
+import styles from './Spec.less';
 const Option = Select.Option;
 
 
 
 /*商品规格信息*/
 function ProductSpec({ dispatch}) {
-
 
   const columns = [
     {
@@ -17,7 +16,7 @@ function ProductSpec({ dispatch}) {
       key: 'name',
       width:250,
       render: function(text, record, index) {
-        return (<Input size="large"/>);
+        return (<Input size="large" value={text}/>);
       }
     },
     {
@@ -29,7 +28,7 @@ function ProductSpec({ dispatch}) {
             size="large"
             mode="multiple"
             style={{ width: '100%' }}
-            placeholder="Please select"
+            placeholder="请选择"
           >
             <Option key="颜色">颜色</Option>
             <Option key="尺码">尺码</Option>
@@ -39,11 +38,11 @@ function ProductSpec({ dispatch}) {
   const dataSource = [
     { 
       id:"1",
-      name:"",
+      name:"规格1",
       value:""
     },{ 
       id:"2",
-      name:"",
+      name:"规格2",
       value:""
     }
   ]
