@@ -109,12 +109,13 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
     });
   }
 
-  function createHandler(values) {
+  function createHandler() {
     dispatch({
-      type: 'products/create',
-      payload: values,
+      type: '/products/create',
+      payload: {}
     });
   }
+  
   function onSelectChange(selectedRowKeys) {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
     // this.setState({ selectedRowKeys });
@@ -151,7 +152,6 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
   }
 
 
-
   return (
     <div>
       <div className="header">
@@ -173,7 +173,7 @@ function ProductList({ dispatch, list: dataSource, loading, total, page: current
             <Dropdown overlay={importMenu}>
               <Button>导入<Icon type="down" /></Button>
             </Dropdown>
-            <Button type="primary">新增</Button>
+            <a href="/product/create"><Button type="primary" >新增</Button></a>
           </div>
         </div>
       </div>

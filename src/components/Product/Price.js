@@ -38,6 +38,8 @@ class ProductPriceForm extends React.Component {
         sm: { span: 16 },
       }
     };
+
+    
     return (
       <div>
         <h3 className="create-header">
@@ -49,7 +51,7 @@ class ProductPriceForm extends React.Component {
             <Col span={8}>
               <FormItem
                 {...formItemLayout}
-                label="市场价"
+                label="销售价"
               >
                 <InputNumber 
                   min={0} precision = {2} defaultValue={0} step={10}
@@ -59,7 +61,7 @@ class ProductPriceForm extends React.Component {
             <Col span={8}>
               <FormItem
                 {...formItemLayout}
-                label="参考价"
+                label="进价"
               >
                 <InputNumber 
                   min={0} precision = {2} defaultValue={0} step={10}
