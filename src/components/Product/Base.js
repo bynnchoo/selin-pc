@@ -111,7 +111,7 @@ class ProductBaseForm extends React.Component {
       }];
 
     return (
-      <Form onSubmit={this.handleSubmit}> 
+      <Form onSubmit={this.handleSubmit} ref="baseForm"> 
         <h3 className="create-header">
           <span className="pde-fh3-tit">基础信息</span>
           <FormItem>
